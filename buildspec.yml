@@ -11,4 +11,4 @@ phases:
 
   post_build:
     commands:
-      - aws s3 cp --recursive ./build s3://mydemosite77
+      - aws s3 cp --recursive ./build s3://mysecuredemosite77

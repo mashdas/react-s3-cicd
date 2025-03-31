@@ -12,3 +12,5 @@ phases:
   post_build:
     commands:
       - aws s3 cp --recursive ./build s3://mysecuredemosite77
+      - echo "invalidating cloudFront cache"
+      - aws cloudfront create-invalidation --distribution-id E15RQFR6R54J2T --paths "/*"
